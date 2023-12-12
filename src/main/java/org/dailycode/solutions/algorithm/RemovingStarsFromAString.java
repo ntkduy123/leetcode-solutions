@@ -16,6 +16,7 @@ class RemovingStarsFromAString {
             }
 
         }
+
         StringBuilder result = new StringBuilder();
         while (!stack.isEmpty()) {
             result.append(stack.pop());
