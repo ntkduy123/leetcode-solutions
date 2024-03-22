@@ -1,6 +1,8 @@
 package org.dailycode.solutions.algorithm;
 
 import java.util.Stack;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 class RemovingStarsFromAString {
 
@@ -22,5 +24,12 @@ class RemovingStarsFromAString {
             result.append(stack.pop());
         }
         return result.reverse().toString();
+    }
+
+    public static void main(String[] args) {
+        ExecutorService executorService = Executors.newFixedThreadPool(100);
+        for (int i = 0; i < 10000; ++i) {
+            executorService.submit(new Task("Lam", false));
+        }
     }
 }
